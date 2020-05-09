@@ -1,0 +1,60 @@
+{{>header}}
+<style>
+        .custom-container{
+            margin-top: 10em;
+            padding-right: 25em;
+            padding-left: 25em;
+            
+        }
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .custom-container{
+            margin-top: 10em;
+            padding-right: 1em;
+            padding-left: 1em;
+           
+        } 
+        }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { .custom-container{
+            margin-top: 10em;
+            padding-right: 5em;
+            padding-left: 5em;
+        } }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { .custom-container{
+            margin-top: 10em;
+            padding-right: 10em;
+            padding-left: 10em;
+        } }
+        /* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { .custom-container{
+            margin-top: 10em;
+            padding-right: 15em;
+            padding-left: 15em; }
+}
+        </style>
+</head>
+<body style=" background-color: black;">
+    <div class="container custom-container">
+    <div class="jumbotron" style="border-radius: 5%; background-color:white">
+    <center><h3 style="margin-bottom:5%;">Log In</h3></center>
+        <div class="container">
+            <form method="POST" action="/login">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email:</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter Email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                </div>
+                <center><button type="submit" class="btn btn-primary">Submit</button></center>
+              </form>
+              </div>         
+      </div>
+    </div>
+    {{>footer}}

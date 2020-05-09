@@ -1,0 +1,22 @@
+{{>header}}
+<div class="cointainer">
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Previous Url</th>
+      <th scope="col">Shortend url</th>
+      <th scope="col">count</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      {{!-- <th scope="row"></th> --}}
+      <td>{{this.previousurl}}</td>
+      <td><a href="{{this.newurl}}" rel="noopener noreferrer" target="_blank">{{this.newurl}}</a></td>
+      <td>{{this.count}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+    </table>
+</div>
